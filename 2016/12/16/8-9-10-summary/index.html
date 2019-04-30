@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="第8-9-10周总结"/>
+
+
+
+
+  <meta name="keywords" content="GIT,工作流," />
+
+
+
+
+
+  <link rel="alternate" href="/default" title="中国矿业大学学生在线">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1" />
+
+
+
+<link rel="canonical" href="http://cumtonline.github.io/2016/12/16/8-9-10-summary/"/>
+
+
+<meta name="description" content="Git历史重写修改刚刚提交的日志  git commit –amend  该命令进入会进入vim编辑器,vim按’i’进入编辑模式.按esc再输入:wq 可保存并退出 修改历史记录有时候一不小心把隐私信息写到了git中,比如邮箱账号密码,qq 的app id,app secret. 但开发无法避免要使用这些隐私信息,目前我所知道的避免隐私泄露的方法有: 1.把这类配置专门放到一个文件中,再用 ig">
+<meta name="keywords" content="GIT,工作流">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第8-9-10周总结">
+<meta property="og:url" content="http://cumtonline.github.io/2016/12/16/8-9-10-summary/index.html">
+<meta property="og:site_name" content="中国矿业大学学生在线">
+<meta property="og:description" content="Git历史重写修改刚刚提交的日志  git commit –amend  该命令进入会进入vim编辑器,vim按’i’进入编辑模式.按esc再输入:wq 可保存并退出 修改历史记录有时候一不小心把隐私信息写到了git中,比如邮箱账号密码,qq 的app id,app secret. 但开发无法避免要使用这些隐私信息,目前我所知道的避免隐私泄露的方法有: 1.把这类配置专门放到一个文件中,再用 ig">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://s1.ax1x.com/2017/12/28/zFOHI.png">
+<meta property="og:image" content="https://s1.ax1x.com/2017/12/28/zFHjH.png">
+<meta property="og:image" content="https://s1.ax1x.com/2017/12/28/zFLDA.png">
+<meta property="og:image" content="https://s1.ax1x.com/2017/12/28/zFjEt.png">
+<meta property="og:image" content="https://s1.ax1x.com/2017/12/28/zFvUP.png">
+<meta property="og:image" content="https://s1.ax1x.com/2017/12/28/zFqud.png">
+<meta property="og:updated_time" content="2017-12-29T09:20:27.019Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="第8-9-10周总结">
+<meta name="twitter:description" content="Git历史重写修改刚刚提交的日志  git commit –amend  该命令进入会进入vim编辑器,vim按’i’进入编辑模式.按esc再输入:wq 可保存并退出 修改历史记录有时候一不小心把隐私信息写到了git中,比如邮箱账号密码,qq 的app id,app secret. 但开发无法避免要使用这些隐私信息,目前我所知道的避免隐私泄露的方法有: 1.把这类配置专门放到一个文件中,再用 ig">
+<meta name="twitter:image" content="https://s1.ax1x.com/2017/12/28/zFOHI.png">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1" />
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?60efd223d1a759d774d495ebe182c9ff";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+    <title> 第8-9-10周总结 - 中国矿业大学学生在线 </title>
+  </head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo"><img src="https://s1.ax1x.com/2017/12/29/z06uF.png"></a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                文章
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                关于
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/friends">
+                            
+                            
+                                友链
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/search">
+                            
+                            
+                                站内搜索
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          第8-9-10周总结
+        
+      </h1>
+
+      <time class="post-time">
+          12月 16 2016
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <h1 id="Git历史重写"><a href="#Git历史重写" class="headerlink" title="Git历史重写"></a>Git历史重写</h1><p><strong>修改刚刚提交的日志</strong></p>
+<blockquote>
+<p>git commit –amend</p>
+</blockquote>
+<p>该命令进入会进入vim编辑器,vim按’i’进入编辑模式.按esc再输入:wq 可保存并退出</p>
+<h2 id="修改历史记录"><a href="#修改历史记录" class="headerlink" title="修改历史记录"></a>修改历史记录</h2><p>有时候一不小心把隐私信息写到了git中,比如邮箱账号密码,qq 的app id,app secret.</p>
+<p>但开发无法避免要使用这些隐私信息,目前我所知道的避免隐私泄露的方法有:</p>
+<p>1.把这类配置专门放到一个文件中,再用 ignore文件忽略它,使得不被git跟踪</p>
+<p>2.把隐私信息保存到系统环境变量中,这样就不会把信息直接硬编码到文件中</p>
+<p>使用交互式衍合命令</p>
+<ol>
+<li><code>git rebase -i HEAD~1</code></li>
+</ol>
+<p>修改上一个版本的历史记录,可改为HEAD~2,或者提交记录的开头编号</p>
+<p>交互衍合中可以使用<code>git rebase --abort</code>停止</p>
+<p>然后进入vim编辑器</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">pick 9a54fd4 我的第2个提交</span><br><span class="line">pick 0d4a808 我的第1个提交</span><br><span class="line"><span class="meta">#</span> Rebase 326fc9f..0d4a808 onto d286baa</span><br><span class="line"><span class="meta">#</span></span><br><span class="line"><span class="meta">#</span> Commands:</span><br><span class="line"><span class="meta">#</span> p, pick = use commit</span><br><span class="line"><span class="meta">#</span> r, reword = use commit, but edit the commit message</span><br><span class="line"><span class="meta">#</span> e, edit = use commit, but stop for amending</span><br><span class="line"><span class="meta">#</span> s, squash = use commit, but meld into previous commit</span><br><span class="line"><span class="meta">#</span> f, fixup = like "squash", but discard this commit's log message</span><br><span class="line"><span class="meta">#</span> x, exec = run command (the rest of the line) using shell</span><br><span class="line"><span class="meta">#</span></span><br><span class="line"><span class="meta">#</span> If you remove a line here THAT COMMIT WILL BE LOST.</span><br><span class="line"><span class="meta">#</span> However, if you remove everything, the rebase will be aborted.</span><br><span class="line"><span class="meta">#</span></span><br></pre></td></tr></table></figure>
+<p>下面是提示信息,如果找到你要修改的那个分支,把他的前面改为edit,比如第一个提交</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pick 9a54fd4 我的第2个提交</span><br><span class="line">edit 0d4a808 我的第1个提交</span><br></pre></td></tr></table></figure>
+<p>:wq保存并退出<br>开始交互式衍合,git会自动停在”我的第1个提交”,此时可以修改本地文件.并输入<code>git add .</code>保存本次修改</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">e/Codes/tempcode (master|REBASE-i 1/2) #命令行中REASE表示当前处于交互衍合模式,1/2代表共2步,已经执行到第1步</span><br></pre></td></tr></table></figure>
+<p>add命令使用后再使用<code>git rebase --continue</code>此时再次跳入vim界面</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Stopped at d286baa... 我的第1个提交</span><br><span class="line">You can amend the commit now, with</span><br><span class="line">git commit --amend</span><br><span class="line">Once you are satisfied with your changes, run</span><br><span class="line">git rebase --continue</span><br></pre></td></tr></table></figure>
+<p>可以在此修改提交信息,并用<code>:wq</code>保存退出,衍合继续<br>修改历史的过程中常常会出现冲突的情况,记得解决冲突</p>
+<p>相关资料:</p>
+<ul>
+<li><a href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E9%87%8D%E5%86%99%E5%8E%86%E5%8F%B2" target="_blank" rel="noopener">Git-工具-重写历史</a></li>
+<li><a href="http://www.cnblogs.com/sjjg/p/4979417.html" target="_blank" rel="noopener">衍合还是合并</a></li>
+</ul>
+<h1 id="Git工作流"><a href="#Git工作流" class="headerlink" title="Git工作流"></a>Git工作流</h1><p>工作流是对工作流程及其各操作步骤之间业务规则的抽象、概括描述。</p>
+<p>比如下课吃饭的工作流是:</p>
+<p>收拾书包-&gt;下楼-&gt;去三食堂-&gt;买饭-&gt;在三食堂吃饭</p>
+<p>但这个工作流可以是:</p>
+<p>收拾书包-&gt;下楼-&gt;去二食堂-&gt;买饭-&gt;打包回宿舍</p>
+<p>从上述例子，这个工作流是可变的，可定制的，而计算机软件就是为了解决现实世界中的问题，完成某项任务，把任务抽象出工作流，用软件完成工作。</p>
+<p>git大部分的用途是软件开发，它的基本动作是：推送，拉取，开分支，合并分支，处理冲突。</p>
+<p>为了高效管理项目，可以用某种工作流来限制git使用方式。</p>
+<p>就拿最典型的<strong>Gitflow</strong>工作流举例子</p>
+<p><img src="https://s1.ax1x.com/2017/12/28/zFOHI.png" alt="image2016-12-4 11-27-4"></p>
+<p>开发时都在Develop分支上开发，开发时能创建若干个Feature分支，用于项目的某个功能开发。开发到一定阶段时候就能用Release分支发布版本。Release分支上不再有大的变动，一般就是微小的跳转和bug修复。当该版本完善后即可推送到Master上。</p>
+<p>在版本发布后如果有bug出现，则创建Hotfix分支进行维护，Hotfix上的修改可以合并到master分支和develop分支。</p>
+<h2 id="SourceTree的工作流"><a href="#SourceTree的工作流" class="headerlink" title="SourceTree的工作流"></a>SourceTree的工作流</h2><p>最好用的Git客户端SourceTree提供了这种工作流的便捷操作</p>
+<p><img src="https://s1.ax1x.com/2017/12/28/zFHjH.png" alt="image2016-12-4 11-37-8.png"></p>
+<p><img src="https://s1.ax1x.com/2017/12/28/zFLDA.png" alt="image2016-12-4 11-36-25"></p>
+<p>点击Git工作流，设置分支的名字</p>
+<p><img src="https://s1.ax1x.com/2017/12/28/zFjEt.png" alt="image2016-12-4 11-39-32"></p>
+<p>自动创建develop分支并切换到该分支</p>
+<p><img src="https://s1.ax1x.com/2017/12/28/zFvUP.png" alt="image2016-12-4 11-40-17"></p>
+<p>在develop下的动作有</p>
+<p><img src="https://s1.ax1x.com/2017/12/28/zFqud.png" alt="image2016-12-4 11-35-51"></p>
+<p>一般的流程是,在develop建立新的功能,功能完成后合并到delelop,当合适的时候建立新的发布版本,然后再发布版本,SourceTree会自动的在这次发布上打上标签.</p>
+<p>相关资料:</p>
+<p><a href="https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E6%B5%81%E5%88%86%E6%94%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E6%B5%81" target="_blank" rel="noopener">Git 分支 - 分支开发工作流</a></p>
+<p><a href="http://www.jianshu.com/p/91acec85c3a4" target="_blank" rel="noopener">深入理解学习Git工作流</a></p>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzI5MjUxNjA4Mw==&amp;mid=2247483863&amp;idx=1&amp;sn=40ea2c761a4fed50e2982ccc6f1676f3&amp;chksm=ec01784bdb76f15dd3d35324c24e1b93ec3b2dd2a438b17dc2cb40c2f44079d9a83a24ad1faf&amp;mpshare=1&amp;scene=1&amp;srcid=1128f0ONiLJZDn8XaliEStpR#rd" target="_blank" rel="noopener">页面调试小技巧</a></p>
+<h1 id="分享"><a href="#分享" class="headerlink" title="分享"></a>分享</h1><p><a href="undefined">怎么花最少的钱提升出租屋的格调</a></p>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzAxODE2MjM1MA==&amp;mid=2651551457&amp;idx=1&amp;sn=6939ce7cc0efa82e0fd2c9f00e622471&amp;chksm=8025a120b7522836aff0209e54a2b6af7e06fd52d9b13e091ca57a63c0b29371ecb4c2909760&amp;mpshare=1&amp;scene=1&amp;srcid=1116qeRQpOZV6oke8usMbB0e#rd" target="_blank" rel="noopener">哪里可以找到前端开发的最新资讯？</a></p>
+<p><a href="https://segmentfault.com/p/1210000007656942" target="_blank" rel="noopener">推荐轻量高效无依赖的开源JS插件和库</a></p>
+<p><a href="http://enjoycss.com/" target="_blank" rel="noopener">在线CSS代码可视化工具</a></p>
+
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+		<div class="post-tags">
+		  
+			<a href="/tags/GIT/">GIT</a>
+		  
+			<a href="/tags/工作流/">工作流</a>
+		  
+		</div>
+		
+
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2016/12/16/11-12-summary/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">第11-12周总结</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    
+    
+      <a class="next" href="/2016/11/14/6-7-summary/">
+        <span class="next-text nav-default">第6-7周总结</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2000 -
+    
+    2018
+    <span class="footer-author"><a href="https://github.com/cumtflyingstudio">flyingstudio</a>.</span>
+    <span class="power-by">
+         博客主题 <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>

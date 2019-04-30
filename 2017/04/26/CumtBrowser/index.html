@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="CumtBrowser"/>
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/default" title="中国矿业大学学生在线">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1" />
+
+
+
+<link rel="canonical" href="http://cumtonline.github.io/2017/04/26/CumtBrowser/"/>
+
+
+<meta name="description" content="写在前面  本文是由移动互联组黄果普写成  原文地址:here  矿大浏览器APP开发记录一.项目想法来源工作室有一个 矿大导航网，有手机版，但是感觉网址太难记，非常鸡肋。所以就产生了做一个导航类APP的想法。  二.项目开发过程 2.22~2.28  模仿必应APP，使用按钮实现导航 基本功能实现了，但是界面不作评价，能看新闻就更好（老七原话）  3.01~3.29  一直停滞不前，期间想找一">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CumtBrowser">
+<meta property="og:url" content="http://cumtonline.github.io/2017/04/26/CumtBrowser/index.html">
+<meta property="og:site_name" content="中国矿业大学学生在线">
+<meta property="og:description" content="写在前面  本文是由移动互联组黄果普写成  原文地址:here  矿大浏览器APP开发记录一.项目想法来源工作室有一个 矿大导航网，有手机版，但是感觉网址太难记，非常鸡肋。所以就产生了做一个导航类APP的想法。  二.项目开发过程 2.22~2.28  模仿必应APP，使用按钮实现导航 基本功能实现了，但是界面不作评价，能看新闻就更好（老七原话）  3.01~3.29  一直停滞不前，期间想找一">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-12-26T18:43:01.874Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CumtBrowser">
+<meta name="twitter:description" content="写在前面  本文是由移动互联组黄果普写成  原文地址:here  矿大浏览器APP开发记录一.项目想法来源工作室有一个 矿大导航网，有手机版，但是感觉网址太难记，非常鸡肋。所以就产生了做一个导航类APP的想法。  二.项目开发过程 2.22~2.28  模仿必应APP，使用按钮实现导航 基本功能实现了，但是界面不作评价，能看新闻就更好（老七原话）  3.01~3.29  一直停滞不前，期间想找一">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1" />
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?60efd223d1a759d774d495ebe182c9ff";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+    <title> CumtBrowser - 中国矿业大学学生在线 </title>
+  </head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo"><img src="https://s1.ax1x.com/2017/12/29/z06uF.png"></a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                文章
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                关于
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/friends">
+                            
+                            
+                                友链
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/search">
+                            
+                            
+                                站内搜索
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          CumtBrowser
+        
+      </h1>
+
+      <time class="post-time">
+          4月 26 2017
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <h4 id="写在前面"><a href="#写在前面" class="headerlink" title=" 写在前面 "></a><strong> 写在前面 </strong></h4><p><strong> 本文是由移动互联组黄果普写成 </strong></p>
+<p>原文地址:<a href="https://github.com/Gopoo/CumtBrowser" target="_blank" rel="noopener">here</a></p>
+<hr>
+<h2 id="矿大浏览器APP开发记录"><a href="#矿大浏览器APP开发记录" class="headerlink" title="矿大浏览器APP开发记录"></a>矿大浏览器APP开发记录</h2><h3 id="一-项目想法来源"><a href="#一-项目想法来源" class="headerlink" title="一.项目想法来源"></a>一.项目想法来源</h3><p>工作室有一个 矿大导航网，有手机版，但是感觉网址太难记，非常鸡肋。所以就产生了做一个导航类APP的想法。</p>
+<hr>
+<h3 id="二-项目开发过程"><a href="#二-项目开发过程" class="headerlink" title="二.项目开发过程"></a>二.项目开发过程</h3><p><strong> 2.22~2.28 </strong></p>
+<p>模仿必应APP，使用按钮实现导航</p>
+<p>基本功能实现了，但是界面不作评价，能看新闻就更好（老七原话）</p>
+<p><strong> 3.01~3.29 </strong></p>
+<p>一直停滞不前，期间想找一下暑期实习，准备了一下美团笔试，阿里一面</p>
+<p>全部GG，感觉Android开发的要求很高，后悔大一没有好好学（现在也没有）</p>
+<p><strong> 3.29~3.31 </strong></p>
+<p>莫大佬做Logo，模仿TopGithub这个APP的风格</p>
+<p>效果还是很nice的，比我以前做的好多了</p>
+<p><strong> 4.01~4.05 </strong></p>
+<p>清明节，第一天LOL，其余时间都在桃二，把APP改成了MVP框架，把在服务器上获取id为今天（例如：20170425）的背景图改成获取最后一行</p>
+<p>MVP还是挺重要的，以后可以看得懂</p>
+<p><strong> 4.05~4.13 </strong></p>
+<p>在她的建议下，修改了各种细节：图标，控件的颜色，点击效果，标题栏颜色……；莫大佬做了答辩的ppt，感觉做得像模板一样</p>
+<p>都是一些细枝末节，改了之后感觉界面很不错（4.13是最后期限，因为有一个比赛要在这一天答辩）</p>
+<p><strong> 4.14~now </strong></p>
+<p>造势、推广；在任务君上推广</p>
+<p>1.公众号点赞蛮多的（一条400+，还有一条600+）2.莫大佬第一个造势的（本来想统计点赞数的，可惜她删说说了）3.任务君那条说说查看量1000+，但是下载量105（感觉还可以吧，不过花了60RMB，不划算）</p>
+<hr>
+<h3 id="三-项目Bug"><a href="#三-项目Bug" class="headerlink" title="三.项目Bug"></a>三.项目Bug</h3><p><strong> 0 </strong></p>
+<p>预留位置（很重要的一个Bug，突然忘了）</p>
+<p><strong> 1 </strong></p>
+<p>首页默认背景图太大导致很多人感觉卡（当时眼睛瞎了，把2000Kb当作200kb）</p>
+<p>下个版本换（现在不会卡，因为添加了一张网络图片，比较小）</p>
+<p><strong> 2 </strong></p>
+<p>因为bmob获取数据限制次数，所以内容都放在一张表里，给运营造成了很大困扰</p>
+<p>下个版本拆开，大不了付费使用Bmob</p>
+<p><strong> 3 </strong></p>
+<p>没有限制反馈内容字数（旁边寝室的发了很多很多字，搞得我后台看的时候有点卡）</p>
+<p>这个人脑子有问题。。。。专门搞我的吧</p>
+<p><strong> 4 </strong></p>
+<p>果脯大佬，要是反馈可以回复就好了</p>
+<p>下个版本加用户模块（只要反馈时填联系方式，肯定回复）</p>
+<p><strong> 5 </strong></p>
+<p>1浏览器闪退2主界面不流畅3页面单一4缺少创意</p>
+<p>看到这个反馈我很sad（似乎安卓7.0兼容性确实不好）</p>
+<p><strong> 6 </strong></p>
+<p>这个有推送吗，什么学校重要新闻，通知什么的</p>
+<p>增加功能</p>
+<p><strong> 7 </strong></p>
+<p>输入网站还是会跳到百度，不妨先识别下用户输入格式如果是域名/ip就直接访问。</p>
+<p>这个确实好难啊，正则表达式判断很烦，因为有人不输http:// ，没什么好方法</p>
+<p><strong> 8 </strong></p>
+<p>APP响应速度感人</p>
+<p>感觉和手机有关，很有可能时首页背景图太大</p>
+<p><strong> 9 </strong></p>
+<p>主页面没有太多的功能！不像uc，用不顺手！</p>
+<p>那你用UC啊（我又没模仿UC）</p>
+<p><strong>（4~9为用户反馈）</strong></p>
+<hr>
+<p><strong> 四.矿大浏览器V2.0 ？</strong></p>
+<p>目前没什么明确的想法，想加入用户模块，实现改变背景图，保存背景图，增加一个讨论模块？不清楚</p>
+<hr>
+<p><strong> 五.反思 </strong></p>
+<p>1.做项目就马上行动</p>
+<p>2.做项目不要太多人，感觉没什么用（这个APP两个人就做出来了）</p>
+<p>3.拖延症很可怕</p>
+<hr>
+<p><strong> 六.应用市场审核 </strong></p>
+<p>1.应用宝：三天，审核失败（不让个人开发者上架浏览器类APP）</p>
+<p>2.360手机助手：四天（虽然说一天之内，但是一直拖，催了也没有用），审核失败（APP名称中“矿大”需要企业开发者身份申请）</p>
+<p>3.小米：五天（超级慢），审核失败（APP功能简单，界面垃圾）</p>
+<p>4.豌豆荚（阿里开发者平台）：两天，成功，但是要打印开发者申明（出了什么事都是自己负责，和阿里无关）</p>
+<p>5.百度手机助手（包含91、安卓市场）：两天，成功，第一个申请成功的</p>
+<p>6.魅族手机助手：三天，成功，还不错，挺快的</p>
+<p>7.OPPO、Vivo、华为、联想：不让个人开发者提交APP</p>
+<p>（所有应用市场不让提交WEBAPP）</p>
+<hr>
+<p><strong> 七.下载方式 </strong></p>
+<p><a href="http://shouji.baidu.com/software/11314796.html" target="_blank" rel="noopener">百度手机助手</a><br><a href="http://app.meizu.com/apps/public/detail?package_name=com.flyingstudio.cumtbrowser" target="_blank" rel="noopener">魅族应用市场</a><br><a href="http://www.wandoujia.com/apps/com.flyingstudio.cumtbrowser" target="_blank" rel="noopener">豌豆荚</a><br><a href="http://m.pp.cn/detail.html?appid=7605181&amp;ch_src=pp_dev&amp;ch=default" target="_blank" rel="noopener">PP助手</a><br><a href="http://apk.91.com/Soft/Android/com.flyingstudio.cumtbrowser-1.html" target="_blank" rel="noopener">91</a><br><a href="http://apk.hiapk.com/appinfo/com.flyingstudio.cumtbrowser/1" target="_blank" rel="noopener">安卓市场</a><br><a href="http://www.pgyer.com/cumt" target="_blank" rel="noopener">官网下载</a></p>
+<hr>
+<p style="margin-top: 0.4em; text-align: center"><br><b style="font-size: 1.5em;font-weight: 600;">未经授权，禁止转载</b><br> </p>
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2017/04/30/the-tenth-week-summary-in-the-summer-of-2017/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">2017年(夏)第十周总结</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    
+    
+      <a class="next" href="/2017/04/23/the-ninth-week-summary-in-the-summer-of-2017/">
+        <span class="next-text nav-default">2017年(夏)第九周总结</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2000 -
+    
+    2018
+    <span class="footer-author"><a href="https://github.com/cumtflyingstudio">flyingstudio</a>.</span>
+    <span class="power-by">
+         博客主题 <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>

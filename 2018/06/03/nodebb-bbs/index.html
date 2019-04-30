@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="nodebb搭建,维护,DZ数据迁移"/>
+
+
+
+
+  <meta name="keywords" content="nodebb," />
+
+
+
+
+
+  <link rel="alternate" href="/default" title="中国矿业大学学生在线">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1" />
+
+
+
+<link rel="canonical" href="http://cumtonline.github.io/2018/06/03/nodebb-bbs/"/>
+
+
+<meta name="description" content="为什么选择了NodeBB?我也不知道~~~  NodeBB官方Github NodeBB中文论坛 NodeBB官方文档 NodeBB中文文档 安装 此处的方式是Docker安装部署(https://hub.docker.com/r/nodebb/docker/)不用考虑环境配置问题，但是相应的也会有一些弊端比如文件的修改等变得麻烦  下方为nodebb镜像的YAML123456789cumt:">
+<meta name="keywords" content="nodebb">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nodebb搭建,维护,DZ数据迁移">
+<meta property="og:url" content="http://cumtonline.github.io/2018/06/03/nodebb-bbs/index.html">
+<meta property="og:site_name" content="中国矿业大学学生在线">
+<meta property="og:description" content="为什么选择了NodeBB?我也不知道~~~  NodeBB官方Github NodeBB中文论坛 NodeBB官方文档 NodeBB中文文档 安装 此处的方式是Docker安装部署(https://hub.docker.com/r/nodebb/docker/)不用考虑环境配置问题，但是相应的也会有一些弊端比如文件的修改等变得麻烦  下方为nodebb镜像的YAML123456789cumt:">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://s1.ax1x.com/2018/06/04/CTdQVH.md.png">
+<meta property="og:updated_time" content="2018-06-05T09:43:03.974Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="nodebb搭建,维护,DZ数据迁移">
+<meta name="twitter:description" content="为什么选择了NodeBB?我也不知道~~~  NodeBB官方Github NodeBB中文论坛 NodeBB官方文档 NodeBB中文文档 安装 此处的方式是Docker安装部署(https://hub.docker.com/r/nodebb/docker/)不用考虑环境配置问题，但是相应的也会有一些弊端比如文件的修改等变得麻烦  下方为nodebb镜像的YAML123456789cumt:">
+<meta name="twitter:image" content="https://s1.ax1x.com/2018/06/04/CTdQVH.md.png">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1" />
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?60efd223d1a759d774d495ebe182c9ff";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+    <title> nodebb搭建,维护,DZ数据迁移 - 中国矿业大学学生在线 </title>
+  </head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo"><img src="https://s1.ax1x.com/2017/12/29/z06uF.png"></a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                文章
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                关于
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/friends">
+                            
+                            
+                                友链
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/search">
+                            
+                            
+                                站内搜索
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          nodebb搭建,维护,DZ数据迁移
+        
+      </h1>
+
+      <time class="post-time">
+          6月 03 2018
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <blockquote>
+<p>为什么选择了NodeBB?<br>我也不知道~~~</p>
+</blockquote>
+<p><a href="https://github.com/NodeBB" target="_blank" rel="noopener">NodeBB官方Github</a></p>
+<p><a href="https://community.nodebb-cn.org" target="_blank" rel="noopener">NodeBB中文论坛</a></p>
+<p><a href="https://docs.nodebb.org/" target="_blank" rel="noopener">NodeBB官方文档</a></p>
+<p><a href="https://www.kancloud.cn/a632079/nodebb-cn/336022" target="_blank" rel="noopener">NodeBB中文文档</a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><blockquote>
+<p>此处的方式是Docker安装部署(<a href="https://hub.docker.com/r/nodebb/docker/" target="_blank" rel="noopener">https://hub.docker.com/r/nodebb/docker/</a>)<br>不用考虑环境配置问题，但是相应的也会有一些弊端<br>比如文件的修改等变得麻烦</p>
+</blockquote>
+<p>下方为nodebb镜像的YAML<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">cumt:</span><br><span class="line">  image: index.docker.io/nodebb/docker:v1.9.3</span><br><span class="line">  privileged: <span class="literal">false</span></span><br><span class="line">  restart: always</span><br><span class="line">  ports:</span><br><span class="line">  - 4567:4567</span><br><span class="line">  volumes:</span><br><span class="line">  - /bbs/:/usr/src/app/config <span class="comment">#为了修改文件方便，加了一个文件夹方便和宿主机文件交换</span></span><br><span class="line">  - /bbs/public/uploads:/usr/src/app/public/uploads <span class="comment">#同步上传的文件到宿主机</span></span><br></pre></td></tr></table></figure></p>
+<p>同时关于docker的管理推荐使用中国的容器管理平台，镜像会直接拉取国内复制来的镜像<br>工作室目前用的是<a href="https://www.daocloud.io/" target="_blank" rel="noopener">https://www.daocloud.io/</a></p>
+<blockquote>
+<p>拉取nodebb镜像并生成容器后，再拉取一个mongodb镜像作为数据库容器<br>为了维护方便，单独使用一个容器，以后的nodebb论坛的升级可以直接拉取新的版本镜像<br>安装新版本的时候填写数据库容器内网地址就行啦~</p>
+</blockquote>
+<p>在成功生成mongodb容器后，要首先进入容器创建我们需要的数据库名字和此数据库相应的用户密码<br><a href="https://docs.nodebb.org/configuring/databases/mongo" target="_blank" rel="noopener">官方也有介绍</a></p>
+<p>下面是mongo镜像的YAML,我们通过数据卷可以同步更新数据到宿主机<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mongodb:</span><br><span class="line">  image: library/mongo:3.4.15</span><br><span class="line">  privileged: <span class="literal">false</span></span><br><span class="line">  restart: always</span><br><span class="line">  ports:</span><br><span class="line">  - 27017:27017</span><br><span class="line">  volumes:</span><br><span class="line">  - /var/lib/docker/volumes/mongoconfig/_data:/data/configdb</span><br><span class="line">  - /var/lib/docker/volumes/mongodata/_data:/data/db</span><br></pre></td></tr></table></figure></p>
+<p>一般国内服务器会配置安全组，为了方便你也可以暂时开放mongodb容器外网端口<br>在本机远程连接进行配置，这里推荐一款windows可视化工具<a href="https://robomongo.org/" target="_blank" rel="noopener">Robo 3T</a></p>
+<p>然后我们通过nginx代理设置我们需要的域名就行了~</p>
+<blockquote>
+<p>这样安装之后你就可以配置自己的bbs了，这样的方式会给我们省去很多环境配置的麻烦</p>
+</blockquote>
+<h3 id="可能遇到的问题"><a href="#可能遇到的问题" class="headerlink" title="可能遇到的问题"></a>可能遇到的问题</h3><ul>
+<li>论坛一直显示断开连接<br>这时候你需要修改容器config.json里面的url为你的自定义域名</li>
+</ul>
+<h2 id="版本升级"><a href="#版本升级" class="headerlink" title="版本升级"></a>版本升级</h2><blockquote>
+<p>nodebb并不好升级，按照官方文档的操作我们需要首先备份数据库和用户上传文件<br>但是我们使用了docker几句可以避免这些问题<br>然后我们要做的就是更新docker镜像并重新生成容器，配置相应的数据库就行了</p>
+</blockquote>
+<ul>
+<li>需要注意的是我们生成新的容器后要停用一切插件以防nodebb系统直接崩溃</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./nodebb reset -a</span><br></pre></td></tr></table></figure>
+<h2 id="数据库维护和备份"><a href="#数据库维护和备份" class="headerlink" title="数据库维护和备份"></a>数据库维护和备份</h2><blockquote>
+<p>定时备份数据库并迁移到其他机器是件很重要的事情<a href="https://www.kancloud.cn/a632079/nodebb-cn/373544" target="_blank" rel="noopener">数据库备份</a></p>
+</blockquote>
+<p>由于我们使用的是docker容器，备份命令就需要连接我们相应的内网地址</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongodump -h 172.22.0.12:27017 -u 用户名 -p 密码 --authenticationDatabase=数据库名 -d 数据库名</span><br></pre></td></tr></table></figure>
+<ul>
+<li>我们需要注意的是如果定时执行的脚本在宿主机，我们需要在宿主机安装mongo以支持mongodump命令</li>
+<li>同时这个定时备份脚本的成功输出语句并不能正确的反应是否成功备份<br>我们还是最好定期检查一下</li>
+</ul>
+<blockquote>
+<p>如果你要恢复数据库文件，我们可以通过我们保存的备份文件上传到新的mongodb外置的数据卷<br>即比如:</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">把备份文件放到宿主机的 /var/lib/docker/volumes/mongodata/_data</span><br><span class="line">容器中直接打开 /data/db</span><br><span class="line">然后解压之后(tar -zxvf xxx.tar.gz)</span><br><span class="line">运行</span><br><span class="line">mongorestore -u nodebb -p yourpassword --authenticationDatabase=nodebb -d nodebb --drop dump/nodebb</span><br><span class="line">即可</span><br></pre></td></tr></table></figure>
+<h2 id="discuz-数据迁移到nodebb"><a href="#discuz-数据迁移到nodebb" class="headerlink" title="discuz!数据迁移到nodebb"></a>discuz!数据迁移到nodebb</h2><blockquote>
+<p>旧的论坛数据库是Mysql,完全不同的数据库类型，也是不可能一样的数据库字段<br>但是论坛的性质使得他们数据字段部分是相同的，我们只需要过滤筛选我们所需要的数据，然后通过NodeBB接口插件导入我们要用的信息就行了<br>其实这个过程并不具有技术难度，只是比较复杂和麻烦<br>我们首先需要熟悉Dz和nodebb数据库各个字段 <a href="http://discuzt.cr180.com/discuzcode-db.html" target="_blank" rel="noopener">DZ数据库字典</a></p>
+</blockquote>
+<h3 id="对于用户的筛选"><a href="#对于用户的筛选" class="headerlink" title="对于用户的筛选"></a>对于用户的筛选</h3><blockquote>
+<p>我们都知道Mysql数据库外键很方便我们联表或者关联查询，通过这种方式把我们需要的用户信息组成json<br>通过NodeBB接口post到mongodb(如果不使用api直接导入到mongo，我们还要自己组合mongo字段)</p>
+</blockquote>
+<p>由于nodebb-api用户新建只支持用户名和密码，邮箱的POST,我们可以新建成功后，记录下新建成功的用户uid，然后通过update用户信息来更新用户资料</p>
+<blockquote>
+<p>关于用户的头像,论坛等cms一般都有自己的用户头像文件命名规则<br>对于dz论坛自己获取头像的的代码如下,我们可以通过模仿流程来获取头像文件夹的路径</p>
+</blockquote>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_avatar</span><span class="params">($uid, $size = <span class="string">'middle'</span>, $type = <span class="string">''</span>)</span> </span>&#123;</span><br><span class="line">  $size = in_array($size, <span class="keyword">array</span>(<span class="string">'big'</span>, <span class="string">'middle'</span>, <span class="string">'small'</span>)) ? $size : <span class="string">'middle'</span>;</span><br><span class="line">  $uid = abs(intval($uid));</span><br><span class="line">  $uid = sprintf(<span class="string">"%09d"</span>, $uid);</span><br><span class="line">  $dir1 = substr($uid, <span class="number">0</span>, <span class="number">3</span>);</span><br><span class="line">  $dir2 = substr($uid, <span class="number">3</span>, <span class="number">2</span>);</span><br><span class="line">  $dir3 = substr($uid, <span class="number">5</span>, <span class="number">2</span>);</span><br><span class="line">  $typeadd = $type == <span class="string">'real'</span> ? <span class="string">'_real'</span> : <span class="string">''</span>;</span><br><span class="line">  <span class="keyword">return</span> $dir1.<span class="string">'/'</span>.$dir2.<span class="string">'/'</span>.$dir3.<span class="string">'/'</span>.substr($uid, <span class="number">-2</span>).$typeadd.<span class="string">"_avatar_$size.jpg"</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">===============================================</span><br><span class="line"><span class="comment"># python模仿流程</span></span><br><span class="line">def get_avatar(uid):</span><br><span class="line">    uid = str(abs(int(uid)))</span><br><span class="line">    uid_length = len(uid)</span><br><span class="line">    <span class="keyword">if</span> uid_length &lt; <span class="number">9</span>:</span><br><span class="line">        uid = <span class="string">'0'</span>*(<span class="number">9</span>-uid_length)+uid</span><br><span class="line">    dir1 = uid[<span class="number">0</span>:<span class="number">3</span>]</span><br><span class="line">    dir2 = uid[<span class="number">3</span>:<span class="number">5</span>]</span><br><span class="line">    dir3 = uid[<span class="number">5</span>:<span class="number">7</span>]</span><br><span class="line">    dir4 = uid[<span class="number">7</span>:<span class="number">9</span>]</span><br><span class="line">    old_avatar = os.path.join(</span><br><span class="line">        basedir, <span class="string">'avatar/'</span>+dir1+<span class="string">'/'</span>+dir2+<span class="string">'/'</span>+dir3+<span class="string">'/'</span>+dir4+<span class="string">'_avatar_middle.jpg'</span>)</span><br><span class="line">    <span class="keyword">return</span> old_avatar</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> avatarstatus != <span class="number">0</span>:</span><br><span class="line">    old_avatar = get_avatar(uid)</span><br><span class="line">    new_avatar_address = <span class="string">'/assets/uploads/profile/%a-profileavatar.jpg'</span> % adduser_uid</span><br><span class="line">    new_avatar = os.path.join(basedir, <span class="string">'profile/%a-profileavatar.jpg'</span> % adduser_uid)</span><br><span class="line">    shutil.copy(old_avatar, new_avatar)</span><br><span class="line">    update_data[<span class="string">"picture"</span>] = new_avatar_address</span><br><span class="line">    update_data[<span class="string">"uploadedpicture"</span>] = new_avatar_address</span><br></pre></td></tr></table></figure>
+<h3 id="对于帖子和回复的迁移"><a href="#对于帖子和回复的迁移" class="headerlink" title="对于帖子和回复的迁移"></a>对于帖子和回复的迁移</h3><blockquote>
+<p>理论和以上一样<br>我们需要先研究清楚DZ数据库字典，比如这样的字典<br>我们根据相应数据字段来组合我们需要的mongodb字典<br>我们需要注意的是，在这个表段的组合之后我们也需要update相应的帖子资料<br>更新帖子的发表时间，以及发表作者(我的脚本里只更新了帖子的作者，没有更新帖子发表字段，因此造成用户没有记录帖子发表数，但是帖子详情页作者显示正确)</p>
+</blockquote>
+<p><img src="https://s1.ax1x.com/2018/06/04/CTdQVH.md.png" alt="帖子字典"></p>
+<ul>
+<li><p>如果导入HTMLParser报错,可以参考下面的文件更新到python相应的Lib/site-packages文件夹中 <a href="https://gist.github.com/bay1/24ef682e672554b6d8b8ef3d2f32b3a9" target="_blank" rel="noopener">HTMLParser报错文件参考</a></p>
+</li>
+<li><p>如果requests失败，就增加time.sleep减少发送频率</p>
+</li>
+<li><p>dz是s级别的时间戳，而nodebb是13位的毫秒级，转换公式 reply_dateline = int(round(reply_dateline*1000))</p>
+</li>
+</ul>
+<p><a href="https://gist.github.com/bay1/4f8ad3c2d7a7b8089c0da43d6a9ab807" target="_blank" rel="noopener">迁移脚本完整部分(供参考)</a></p>
+
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+		<div class="post-tags">
+		  
+			<a href="/tags/nodebb/">nodebb</a>
+		  
+		</div>
+		
+
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2018/09/05/flyingstudio/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">学生在线科普文</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    
+    
+      <a class="next" href="/2018/06/03/the-fifth-month-summary-in-2018/">
+        <span class="next-text nav-default">2018年第五月总结</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2000 -
+    
+    2018
+    <span class="footer-author"><a href="https://github.com/cumtflyingstudio">flyingstudio</a>.</span>
+    <span class="power-by">
+         博客主题 <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>

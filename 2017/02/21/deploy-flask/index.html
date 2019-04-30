@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="在Linux下部署flask应用"/>
+
+
+
+
+  <meta name="keywords" content="Linux服务器," />
+
+
+
+
+
+  <link rel="alternate" href="/default" title="中国矿业大学学生在线">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1" />
+
+
+
+<link rel="canonical" href="http://cumtonline.github.io/2017/02/21/deploy-flask/"/>
+
+
+<meta name="description" content="前言虽然flask是Python两大web框架之一,但中文的资料还是比较少的，基本上一个常见问题就一两个版本的解决办法。 flask官方文档也介绍了部署方法，但那几乎只是告诉你有个工具叫XXX能部署flask。 flask应用内直接通过python myflaskapp.py运行,但实际上内部用了一个低性能的服务器,所以要另外选择。 登入服务器前相信大部分人都是使用virtualenv开发的。 在">
+<meta name="keywords" content="Linux服务器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在Linux下部署flask应用">
+<meta property="og:url" content="http://cumtonline.github.io/2017/02/21/deploy-flask/index.html">
+<meta property="og:site_name" content="中国矿业大学学生在线">
+<meta property="og:description" content="前言虽然flask是Python两大web框架之一,但中文的资料还是比较少的，基本上一个常见问题就一两个版本的解决办法。 flask官方文档也介绍了部署方法，但那几乎只是告诉你有个工具叫XXX能部署flask。 flask应用内直接通过python myflaskapp.py运行,但实际上内部用了一个低性能的服务器,所以要另外选择。 登入服务器前相信大部分人都是使用virtualenv开发的。 在">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-12-26T18:43:01.877Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="在Linux下部署flask应用">
+<meta name="twitter:description" content="前言虽然flask是Python两大web框架之一,但中文的资料还是比较少的，基本上一个常见问题就一两个版本的解决办法。 flask官方文档也介绍了部署方法，但那几乎只是告诉你有个工具叫XXX能部署flask。 flask应用内直接通过python myflaskapp.py运行,但实际上内部用了一个低性能的服务器,所以要另外选择。 登入服务器前相信大部分人都是使用virtualenv开发的。 在">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1" />
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?60efd223d1a759d774d495ebe182c9ff";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+    <title> 在Linux下部署flask应用 - 中国矿业大学学生在线 </title>
+  </head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo"><img src="https://s1.ax1x.com/2017/12/29/z06uF.png"></a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                文章
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                关于
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/friends">
+                            
+                            
+                                友链
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/search">
+                            
+                            
+                                站内搜索
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          在Linux下部署flask应用
+        
+      </h1>
+
+      <time class="post-time">
+          2月 21 2017
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>虽然flask是Python两大web框架之一,但中文的资料还是比较少的，基本上一个常见问题就一两个版本的解决办法。</p>
+<p>flask官方文档也介绍了部署方法，但那几乎只是告诉你有个工具叫XXX能部署flask。</p>
+<p>flask应用内直接通过<code>python myflaskapp.py</code>运行,但实际上内部用了一个低性能的服务器,所以要另外选择。</p>
+<h2 id="登入服务器前"><a href="#登入服务器前" class="headerlink" title="登入服务器前"></a>登入服务器前</h2><p>相信大部分人都是使用virtualenv开发的。</p>
+<p>在上服务器前，先确保当前应用的virtualenv环境没有不必要的包，删除他。</p>
+<p>使用命令<code>pip freeze&gt;requriments.txt</code>把包的列表输出到文件。</p>
+<h1 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h1><p>一般的linux都自带了python,python3可能没有python3,需要自行安装。在linux中运行python2 使用命令<code>python</code>,python3是<code>python3</code></p>
+<h2 id="pip-安装"><a href="#pip-安装" class="headerlink" title="pip 安装"></a>pip 安装</h2><p>有了python后,第一时间就是找pip一类的安装工具,如果用python3,通过<code>apt-get install python3-pip</code>进行安装,更多详见<a href="https://www.zhihu.com/question/21653286/answer/95532074" target="_blank" rel="noopener">知乎上的回答</a></p>
+<p><strong>补充:pip源的设置</strong></p>
+<p>一般的云服务器已经帮你配置好了他自己的镜像源,除非你安装的系统不是官方提供的。</p>
+<p>可以通过修改<code>~/.pip/pip.conf</code> （windows是<code></code>C:\Users\Recod\AppData\Roaming` </p>
+<p>`)来配置源,格式如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">index-url = http://pypi.douban.com/simple</span><br><span class="line">[install]</span><br><span class="line">trusted-host = pypi.douban.com</span><br></pre></td></tr></table></figure>
+<p>上面设置了pip下载豆瓣镜像的包。</p>
+<h2 id="virtualenv环境搭建"><a href="#virtualenv环境搭建" class="headerlink" title="virtualenv环境搭建"></a>virtualenv环境搭建</h2><ol>
+<li>安装<code>pip install virtualenv</code></li>
+<li><code>virtualenv -p python3 envname</code> 创建环境</li>
+<li>切换环境 ….. linux上我不会,因为我再这里用了virtualenvwrapper</li>
+</ol>
+<p><strong>virtualenvwrapper</strong></p>
+<p>是virtualenv工具包,方便对环境的管理.</p>
+<p>使用前需配置virtualenv的工作区 <code>WORKON_HOME</code>,即以后创建的virtualenv都会在这个地方</p>
+<p>在linux下修改相关的环境变量文件(/etc/bash.bashrc ,这里能设置环境变量,用户启动时都会运行这个文件)</p>
+<p>在末尾添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export WORKON_HOME=$HOME/.virtualenvsexport PROJECT_HOME=$HOME/DevelVIRTUALENVWRAPPER_PYTHON=&apos;/usr/bin/python3&apos;source /usr/local/bin/virtualenvwrapper.sh</span><br></pre></td></tr></table></figure>
+<p><code>/etc/bash.bashrc</code>如果配置后没效果试试<code>~/.profile</code></p>
+<p>再不行设置这个,这可是全局的<code>/etc/profile</code>,这几个文件区别自行查资料.</p>
+<p>使用:</p>
+<ul>
+<li>mkvirtualenv venvname</li>
+<li>lsvirtualenv #列出环境</li>
+<li>workon venvname #激活环境</li>
+<li>cdvirtualenv #进入当前虚拟环境目录</li>
+<li>cdsitepackages</li>
+<li>lssitepackages</li>
+<li>deactivate #退出环境</li>
+<li>rmvitualenv venvname</li>
+</ul>
+<p>相关资料:</p>
+<ul>
+<li><a href="http://www.cnblogs.com/welhzh/p/5973815.html" target="_blank" rel="noopener">http://www.cnblogs.com/welhzh/p/5973815.html</a></li>
+<li><a href="http://virtualenvwrapper.readthedocs.io" target="_blank" rel="noopener">文档</a></li>
+</ul>
+<h2 id="上传-环境还原"><a href="#上传-环境还原" class="headerlink" title="上传,环境还原"></a>上传,环境还原</h2><p>可以用xshell的文件-&gt;传输或者相关linux命令来传送项目压缩文件,推荐在Linux上搭建ftp环境(vsftpd),这样可以通过pycharm的部署工具方便的发送项目文件,做到随时更新</p>
+<p><strong>安装包</strong></p>
+<p>切换到新建的virtualenv</p>
+<p><strong>注意!!!!!!!!!!!!!!!!!!</strong></p>
+<p>切换环境后绝对不要再用<code>sudo</code>了,如果在sudo中运行python,那么那时的环境就是不是再这个virtualenv中,你的程序很可能因为当前环境没有xxx包而报错。</p>
+<p>所有的文件权限问题在进入环境前设置好，最无脑的方法是项目文件权限都设置为777</p>
+<p>使用pip安装requirement.txt中的包.</p>
+<p>然后你可以先试试用python3 来运行你的程序</p>
+<h2 id="使用Gunicon"><a href="#使用Gunicon" class="headerlink" title="使用Gunicon"></a>使用Gunicon</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install gunicorn</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(venv) $ gunicorn -w 4 -b 127.0.0.1:8080 runserver:myapp</span><br></pre></td></tr></table></figure>
+<ul>
+<li>w 4个工作进程</li>
+<li>runserver一个py文件</li>
+<li>flask app对象,写在这个runserver文件中(好像用manager会报错,我目前还没找到解决办法)</li>
+</ul>
+<p>如果gunicorn说找不到明明安装的包,那么gunicorn命令可能是venv外的gunicorn,切换到venv外删除gunicorn</p>
+<h2 id="使用supervisor"><a href="#使用supervisor" class="headerlink" title="使用supervisor"></a>使用supervisor</h2><p>这是一块管理你应用进程的工具,方便启动与关闭,还有出错重启功能</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install supervisor</span><br></pre></td></tr></table></figure>
+<p>总配置文件在 /etc/supervisor/supervisor.conf,可以分应用配置,应用配置保存在/etc/supervisor/conf.d/,最后所有配置都会被加载<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">##新建编辑留言板应用的文件</span><br><span class="line">$ sudo vim /etc/supervisor/conf.d/messageBoard.conf</span><br><span class="line"></span><br><span class="line">##文件内容</span><br><span class="line">[program:程序名]</span><br><span class="line">#你应该写当前virtualenv环境中gunicorn命令的位置</span><br><span class="line">command=/home/pyVenvs/flyopen/bin/gunicorn -w 4 -b 127.0.0.1:8080 run:app </span><br><span class="line">##项目的根目录在/home/wwwroot/flyopen</span><br><span class="line">directory=/home/wwwroot/flyopen</span><br><span class="line">##默认root</span><br><span class="line">user=swing</span><br><span class="line">autostart=false</span><br><span class="line">autorestart=false</span><br><span class="line">##日志文件,确保文件目录存在</span><br><span class="line">stdout_logfile=/home/swing/logs/gunicorn_supervisor.log</span><br><span class="line">stderr_logfile=/home/swing/logs/gunicorn_supervisor.log</span><br></pre></td></tr></table></figure></p>
+<p><strong>启动</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service supervisor start</span><br></pre></td></tr></table></figure></p>
+<p>注意这里,命令执行后用<code>service --status-all | grep &#39;supervisor&#39;</code>查看服务是否真的启动了<br>入显示的是[-] supervisor 说明没启动.</p>
+<p>尝试直接键入<code>sudo supervisor</code>,然后在启动服务,再查看.<br>另外<code>supervisorctl</code>,<code>supervisor</code>这两个注意拼写,前者是客户端,需要后者服务,所以后者未运行时会一直报出connect error错误</p>
+<p><strong>使用</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">##重新读取配置文件</span><br><span class="line">$ sudo supervisorctl reload</span><br><span class="line"></span><br><span class="line">##查看 supervisor 管理进程的状态</span><br><span class="line">$ sudo supervisorctl status</span><br><span class="line"></span><br><span class="line">##重启服务</span><br><span class="line">$ sudo service supervisor restart</span><br><span class="line"></span><br><span class="line">##启动所有/指定 supervisor 管理的程序进程</span><br><span class="line">$ sudo supervisorctl start [all]|[appname]</span><br><span class="line"></span><br><span class="line">##关闭所有/指定 supervisor 管理的程序进程</span><br><span class="line">$ sudo supervisorctl stop [all]|[appname]</span><br></pre></td></tr></table></figure>
+<p><strong>问题</strong></p>
+<p>运行时候可能报错<code>unix:///var/run/supervisor.sock no such file</code><br>因为在总的配置文件<code>/etc/supervisor/supervisord.conf</code>设置了<code>file=/var/run/supervisor.sock   ; (the path to the socket file)</code></p>
+<blockquote>
+<p>遇到这个问题的时候,我的服务还没启动起来,也许服务启动后就没这个问题</p>
+</blockquote>
+<p>该路径下确实没有这文件.解决办法就是创建一个文件出来</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo touch /var/run/supervisor.sock</span><br><span class="line">sudo chmod 777 /var/run/supervisor.sock</span><br><span class="line">sudo service supervisor restart</span><br></pre></td></tr></table></figure>
+<p><strong>资料</strong></p>
+<ul>
+<li><a href="http://www.cnblogs.com/ajianbeyourself/p/5534737.html" target="_blank" rel="noopener">配置说明</a></li>
+</ul>
+<h2 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h2><p>刚刚运行的程序都在8080端口(别问我干嘛不直接80,不想解释,反正以后一定会用nginx),需要用Nginx来监听80端口,转发用户请求到8080</p>
+<p>下面是复制的</p>
+<p>关于 Nginx 我也就不详细讲了，我们就直奔主题，杀入 Nginx 的默认配置文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /etc/nginx/site-avalidable/default</span><br></pre></td></tr></table></figure>
+<p>暴力修改成为以下的内容</p>
+<blockquote>
+<p>建议先备份一下 <code>default</code> 文件<br><code>sudo cp /etc/nginx/site-avalidable/default /etc/nginx/site-avalidable/default.bak</code></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    server_name example.org; # 这是HOST机器的外部域名，用地址也行</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        proxy_pass http://127.0.0.1:8080; # 这里是指向 gunicorn host 的服务地址</span><br><span class="line">        proxy_set_header Host $host;</span><br><span class="line">        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>记得完成 nginx 需要重新起动 nginx 服务喔！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service nginx restart</span><br></pre></td></tr></table></figure>
+<h2 id="部署资料"><a href="#部署资料" class="headerlink" title="部署资料"></a>部署资料</h2><ul>
+<li><a href="http://www.cnblogs.com/Ray-liang/p/4837850.html" target="_blank" rel="noopener">Flask + Gunicorn + Nginx 部署</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-14-04" target="_blank" rel="noopener">https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-14-04</a></li>
+<li><a href="http://blog.csdn.net/u012675539/article/details/50836775" target="_blank" rel="noopener">http://blog.csdn.net/u012675539/article/details/50836775</a></li>
+</ul>
+
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+		<div class="post-tags">
+		  
+			<a href="/tags/Linux服务器/">Linux服务器</a>
+		  
+		</div>
+		
+
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2017/03/03/internship/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">找实习</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    
+    
+      <a class="next" href="/2017/01/25/download2009/">
+        <span class="next-text nav-default">下载站</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2000 -
+    
+    2018
+    <span class="footer-author"><a href="https://github.com/cumtflyingstudio">flyingstudio</a>.</span>
+    <span class="power-by">
+         博客主题 <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>

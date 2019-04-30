@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="第6-7周总结"/>
+
+
+
+
+  <meta name="keywords" content="单元测试," />
+
+
+
+
+
+  <link rel="alternate" href="/default" title="中国矿业大学学生在线">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1" />
+
+
+
+<link rel="canonical" href="http://cumtonline.github.io/2016/11/14/6-7-summary/"/>
+
+
+<meta name="description" content="测试 单元测试简单地说用代码测试代码 每种语言都有自己的测试框架,功能大同小异 C#中的单元测试 单元测试往往会配合一些工具使用,VS就内置了C#测试的工具 1.创建一个工程,和一个(类库/包)项目  2.写一个简单的方法 12345678910namespace TestObject&amp;#123;  public class FirstObject  &amp;#123;    public int Su">
+<meta name="keywords" content="单元测试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第6-7周总结">
+<meta property="og:url" content="http://cumtonline.github.io/2016/11/14/6-7-summary/index.html">
+<meta property="og:site_name" content="中国矿业大学学生在线">
+<meta property="og:description" content="测试 单元测试简单地说用代码测试代码 每种语言都有自己的测试框架,功能大同小异 C#中的单元测试 单元测试往往会配合一些工具使用,VS就内置了C#测试的工具 1.创建一个工程,和一个(类库/包)项目  2.写一个简单的方法 12345678910namespace TestObject&amp;#123;  public class FirstObject  &amp;#123;    public int Su">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://s1.ax1x.com/2017/12/28/zkGUx.png">
+<meta property="og:image" content="https://s1.ax1x.com/2017/12/28/zkmCT.png">
+<meta property="og:image" content="https://s1.ax1x.com/2017/12/28/zkEEq.png">
+<meta property="og:image" content="https://s1.ax1x.com/2017/12/28/zkZ5V.png">
+<meta property="og:image" content="https://s1.ax1x.com/2017/12/28/zkVU0.png">
+<meta property="og:updated_time" content="2017-12-28T08:35:33.493Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="第6-7周总结">
+<meta name="twitter:description" content="测试 单元测试简单地说用代码测试代码 每种语言都有自己的测试框架,功能大同小异 C#中的单元测试 单元测试往往会配合一些工具使用,VS就内置了C#测试的工具 1.创建一个工程,和一个(类库/包)项目  2.写一个简单的方法 12345678910namespace TestObject&amp;#123;  public class FirstObject  &amp;#123;    public int Su">
+<meta name="twitter:image" content="https://s1.ax1x.com/2017/12/28/zkGUx.png">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1" />
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?60efd223d1a759d774d495ebe182c9ff";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+    <title> 第6-7周总结 - 中国矿业大学学生在线 </title>
+  </head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo"><img src="https://s1.ax1x.com/2017/12/29/z06uF.png"></a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                文章
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                关于
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/friends">
+                            
+                            
+                                友链
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/search">
+                            
+                            
+                                站内搜索
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          第6-7周总结
+        
+      </h1>
+
+      <time class="post-time">
+          11月 14 2016
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><hr>
+<h2 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h2><p>简单地说用代码测试代码</p>
+<p>每种语言都有自己的测试框架,功能大同小异</p>
+<p>C#中的单元测试</p>
+<p>单元测试往往会配合一些工具使用,VS就内置了C#测试的工具</p>
+<p>1.创建一个工程,和一个(类库/包)项目</p>
+<p><img src="https://s1.ax1x.com/2017/12/28/zkGUx.png" alt="image2016-11-14 13-11-2"></p>
+<p>2.写一个简单的方法</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> <span class="title">TestObject</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">FirstObject</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">Sum</span>(<span class="params"><span class="keyword">int</span> a,<span class="keyword">int</span> b</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> a + b;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>3.编写测试代码</p>
+<p>不用的语言用的测试框架,测试工具不同</p>
+<p>下面被TestMethod标记的方法则是测试方法,VS的测试工具(测试资源管理器)会自动扫描你写的带TestMethod的代码并显示出来</p>
+<p><img src="https://s1.ax1x.com/2017/12/28/zkmCT.png" alt="image2016-11-14 13-12-27"></p>
+<p><img src="https://s1.ax1x.com/2017/12/28/zkEEq.png" alt="image2016-11-14 13-16-42"></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[<span class="meta">TestClass()</span>]</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">FirstObjectTests</span></span><br><span class="line">&#123;</span><br><span class="line">  [<span class="meta">TestMethod()</span>]</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">SumTest</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">  </span>&#123;</span><br><span class="line">    FirstObject obj = <span class="keyword">new</span> FirstObject();</span><br><span class="line">    <span class="keyword">int</span> num1 = <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">int</span> num2 = <span class="number">3</span>;</span><br><span class="line">     <span class="comment">//断言,obj.Sum的返回值是等于5,否则就测试失败</span></span><br><span class="line">     Assert.AreEqual(<span class="number">5</span>,obj.Sum(num1, num2));</span><br><span class="line">     &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可以通过VS的工具来执行一个或多个的测试</p>
+<p><img src="https://s1.ax1x.com/2017/12/28/zkZ5V.png" alt="image2016-11-14 13-18-16"></p>
+<ol start="4">
+<li>测试结果</li>
+</ol>
+<p><img src="https://s1.ax1x.com/2017/12/28/zkVU0.png" alt="image2016-11-14 13-18-31"></p>
+<p>测试框架中有专门的代码用于测试,比如上面的Assert类,该类除了断言相当还有</p>
+<p>看名字就知道什么意思</p>
+<table>
+<thead>
+<tr>
+<th><strong>方法</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AreEqual(T,T) AreEqual(T,T,string)</td>
+<td>断言两个类型T的对象有相同的值</td>
+</tr>
+<tr>
+<td>AreNotEqual(T,T) AreNotEqual(T,T,string)</td>
+<td>断言两个类型T的对象的值不相等</td>
+</tr>
+<tr>
+<td>AreSame(T,T) AreSame(T,T,string)</td>
+<td>断言两个变量指向相同的对象</td>
+</tr>
+<tr>
+<td>AreNotSame(T,T) AreNotSame(T,T,string)</td>
+<td>断言两个变量指向不同的对象</td>
+</tr>
+<tr>
+<td>Fail() Fail(string)</td>
+<td>失败断言 －无条件检查</td>
+</tr>
+<tr>
+<td>Inconclusive() Inconclusive(string)</td>
+<td>指示最终不能建立单元测试的结果</td>
+</tr>
+<tr>
+<td>IsTrue(bool) IsTrue(bool,string)</td>
+<td>断言一个返回结果的值为True</td>
+</tr>
+<tr>
+<td>IsFalse(bool) IsFalse(bool,string)</td>
+<td>断言一个返回结果的值为false</td>
+</tr>
+<tr>
+<td>IsNull(object) IsNull(object,string)</td>
+<td>断言一个变量未被分配一个对象的引用</td>
+</tr>
+</tbody>
+</table>
+<p>下面是从其他地方抄过来的一段话</p>
+<blockquote>
+<h3 id="1-单元测试的好处"><a href="#1-单元测试的好处" class="headerlink" title="1.单元测试的好处"></a>1.单元测试的好处</h3><p>（1）单元测试帮助设计</p>
+<p>单元测试迫使我们从关注实现转向关注接口，编写单元测试的过程就是设计接口的过程，使单元测试通过的过程是我们编写实现的过程。我一直觉得这是单元测试最重要的好处，让我们关注的重点放在接口上而非实现的细节。</p>
+<p>（2）单元测试帮助编码</p>
+<p>应用单元测试会<strong>使我们主动消除和减少不必要的耦合</strong>，虽然出发点可能是为了更方便的完成单元测试，但结果通常是类型的职责更加内聚，类型间的耦合显著降低。这是已知的提升编码质量的有效手段，也是提升开发人员编码水平的有效手段。</p>
+<p>（3）单元测试帮助调试</p>
+<p>应用了单元测试的代码在调试时<strong>可以快速定位问题的出处</strong>。</p>
+<p>（4）单元测试<strong>帮助重构</strong></p>
+<p>对于现有项目的重构，从编写单元测试开始是更好的选择。先从局部代码进行重构，提取接口进行单元测试，然后再进行类型和层次级别的重构。</p>
+<p>单元测试在设计、编码和调试上的作用足以使其成为软件开发相关人员的必备技能。</p>
+</blockquote>
+<p><a href="https://www.zhihu.com/question/20120168" target="_blank" rel="noopener">为什么要单元测试</a></p>
+<p><a href="https://www.zhihu.com/question/27313846" target="_blank" rel="noopener">怎么单元测试</a></p>
+<h2 id="网站压力测试"><a href="#网站压力测试" class="headerlink" title="网站压力测试"></a>网站压力测试</h2><p><strong>WebTest特性质量开发平台</strong></p>
+<p><strong>(个人认为最好用的)</strong></p>
+<ul>
+<li>支持服务器测试和App测试,</li>
+<li>服务器压力测试操作简单,看完文档就会(建议全看完)</li>
+<li>最高支持30000并发测试 (测试时请关闭DDos防御机制,因为测试机器人都是同一个IP一定会被监测到的)</li>
+<li>支持配置测试场景</li>
+</ul>
+<p><strong>测试场景</strong></p>
+<p>一个网站不止一个页面,进行压力测试也不能局限于一个页面.为了尽可能模拟真实的用户使用,应配置多个页面的请求动作,</p>
+<p>比如登入场景:</p>
+<ul>
+<li>xxx.com/login</li>
+<li>xxx.com/userindex</li>
+</ul>
+<p>配置这个场景后,机器人就能按这个顺序访问网站,注意网站一般通过cookie来识别用户是否登入,如果没有这个cookie访问第二个链接则可能够会自动跳转到登入页,所以在第二个请求中要加上这个cookie(你可以先手动到网站上登入后获得这个cookie).</p>
+<p>一个测试能配置多个场景,多个场景能配置访问量的比例</p>
+<hr>
+<p><strong>其他测试工具</strong></p>
+<p>官方地址<a href="http://www.ikende.com/httptest" target="_blank" rel="noopener">http://www.ikende.com/httptest</a></p>
+<p>其实就是一个简单地自动请求url的工具,不需要写任何代码,只要是windows系统装了.Net Framework就能使用,操作简单,功能少.</p>
+<p><a href="https://pts.aliyun.com/lite/index.htm?spm=5176.2020520153.0.0.5wrV7N" target="_blank" rel="noopener">阿里性能测试服务</a></p>
+<p>使用这个测试要在服务器上额外安装东西,所以我就没用</p>
+<h1 id="分享"><a href="#分享" class="headerlink" title="分享"></a>分享</h1><p><a href="http://gold.xitu.io/entry/581fea735bbb500059ebfb2b" target="_blank" rel="noopener">前端</a><a href="http://gold.xitu.io/entry/581fea735bbb500059ebfb2b" target="_blank" rel="noopener">新手能看的网站</a></p>
+<p><a href="http://wiki.flyingstudio.online/blog.thankbabe.com/collection/?hmsr=toutiao.io&amp;utm_medium=toutiao.io&amp;utm_source=toutiao.io" target="_blank" rel="noopener">前端教程与工具</a></p>
+<p><a href="http://www.lintcode.com/zh-cn" target="_blank" rel="noopener">中文OJ LintCode</a></p>
+<p><a href="https://www.freecodecamp.cn/" target="_blank" rel="noopener">在线全栈学习网站</a></p>
+<p><a href="http://www.draw.io/" target="_blank" rel="noopener">程序猿绘图工具</a></p>
+<p><a href="http://www.hubwiz.com/" target="_blank" rel="noopener">汇智网</a> 类似实验楼,个人觉得很好用</p>
+
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+		<div class="post-tags">
+		  
+			<a href="/tags/单元测试/">单元测试</a>
+		  
+		</div>
+		
+
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2016/12/16/8-9-10-summary/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">第8-9-10周总结</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    
+    
+      <a class="next" href="/2016/10/31/4-5-summary/">
+        <span class="next-text nav-default">第4-5周总结</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2000 -
+    
+    2018
+    <span class="footer-author"><a href="https://github.com/cumtflyingstudio">flyingstudio</a>.</span>
+    <span class="power-by">
+         博客主题 <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>

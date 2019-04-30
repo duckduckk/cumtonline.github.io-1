@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="滴滴面经"/>
+
+
+
+
+  <meta name="keywords" content="笔经/面经," />
+
+
+
+
+
+  <link rel="alternate" href="/default" title="中国矿业大学学生在线">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1" />
+
+
+
+<link rel="canonical" href="http://cumtonline.github.io/2017/11/17/the-interview-of-didi-by-HuangGuoPu/"/>
+
+
+<meta name="description" content="Preface 本文是移动组黄果普的滴滴面经。已offer。   简介 因为看到了长航拿到了百度offer，就决定也随便投一投。在牛客和实习僧上找了一些招19届的公司，准备了一周，面了滴滴、百度、搜狐和知乎，最后拿了滴滴的offer，其他的没给面试的机会。   百度（挂、30min）0.介绍项目1.讲讲MVP、MVC2.多线程下的单例模式（两种实现方式）3.如何避免过度绘制（设置背景为null）">
+<meta name="keywords" content="笔经&#x2F;面经">
+<meta property="og:type" content="article">
+<meta property="og:title" content="滴滴面经">
+<meta property="og:url" content="http://cumtonline.github.io/2017/11/17/the-interview-of-didi-by-HuangGuoPu/index.html">
+<meta property="og:site_name" content="中国矿业大学学生在线">
+<meta property="og:description" content="Preface 本文是移动组黄果普的滴滴面经。已offer。   简介 因为看到了长航拿到了百度offer，就决定也随便投一投。在牛客和实习僧上找了一些招19届的公司，准备了一周，面了滴滴、百度、搜狐和知乎，最后拿了滴滴的offer，其他的没给面试的机会。   百度（挂、30min）0.介绍项目1.讲讲MVP、MVC2.多线程下的单例模式（两种实现方式）3.如何避免过度绘制（设置背景为null）">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-12-26T18:43:01.914Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="滴滴面经">
+<meta name="twitter:description" content="Preface 本文是移动组黄果普的滴滴面经。已offer。   简介 因为看到了长航拿到了百度offer，就决定也随便投一投。在牛客和实习僧上找了一些招19届的公司，准备了一周，面了滴滴、百度、搜狐和知乎，最后拿了滴滴的offer，其他的没给面试的机会。   百度（挂、30min）0.介绍项目1.讲讲MVP、MVC2.多线程下的单例模式（两种实现方式）3.如何避免过度绘制（设置背景为null）">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1" />
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?60efd223d1a759d774d495ebe182c9ff";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+    <title> 滴滴面经 - 中国矿业大学学生在线 </title>
+  </head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo"><img src="https://s1.ax1x.com/2017/12/29/z06uF.png"></a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                文章
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                关于
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/friends">
+                            
+                            
+                                友链
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/search">
+                            
+                            
+                                站内搜索
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          滴滴面经
+        
+      </h1>
+
+      <time class="post-time">
+          11月 17 2017
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <h3 id="Preface"><a href="#Preface" class="headerlink" title=" Preface "></a><strong> Preface </strong></h3><p>本文是移动组<a href="https://blog.fight2escape.club/" target="_blank" rel="noopener">黄果普</a>的滴滴面经。已offer。</p>
+<hr>
+<h3 id="简介"><a href="#简介" class="headerlink" title=" 简介 "></a><strong> 简介 </strong></h3><p>因为看到了长航拿到了百度offer，就决定也随便投一投。在牛客和实习僧上找了一些招19届的公司，准备了一周，面了滴滴、百度、搜狐和知乎，最后拿了滴滴的offer，其他的没给面试的机会。</p>
+<hr>
+<h3 id="百度（挂、30min）"><a href="#百度（挂、30min）" class="headerlink" title=" 百度（挂、30min）"></a><strong> 百度（挂、30min）</strong></h3><p>0.介绍项目<br>1.讲讲MVP、MVC<br>2.多线程下的单例模式（两种实现方式）<br>3.如何避免过度绘制（设置背景为null）<br>4.如何降低view树等级<br>5.Rxjava了解多少<br>6.AsyncTask源码<br>7.Handler消息机制<br>8.事件分发机制<br>9.对我的评价：知识掌握的比较全面，不要在意看多少源码（这句有问题，要多看源码）</p>
+<p>由于是外卖部门，已被饿了么收购，也没抱什么幻想。</p>
+<hr>
+<h3 id="搜狐（挂、40-min）"><a href="#搜狐（挂、40-min）" class="headerlink" title=" 搜狐（挂、40+min）"></a><strong> 搜狐（挂、40+min）</strong></h3><p>0.如何避免过度绘制（答的不全面，只知道删除背景）<br>1.AsyncTask源码<br>2.项目<br>3.事件分发机制<br>4.MVP MVVM<br>5.Java内存模型（定义多线程和堆之间的工作方式，当时回答成了Java运行时数据区，网上有很多博客误导大众）<br>6.消息机制<br>7.自定义view？<br>8.CoordinatorLayout<br>9.Glide源码（没看过）<br>10.查找数组中相同的数并输出下标（当时想的先取出一个数然后遍历数组，时间复杂度较高）</p>
+<p>我们招研究生，不怎么招19届的，然后开始分析我的不足，由于面试官看的旧版本源码和我说的不一致，然后就以为我看的别人博客的总结，对我产生误解。</p>
+<hr>
+<h3 id="知乎（挂、30-min）"><a href="#知乎（挂、30-min）" class="headerlink" title=" 知乎（挂、30+min）"></a><strong> 知乎（挂、30+min）</strong></h3><p>0.矿大浏览器发给他<br>1.X5WebView的坑（不清楚，忘完了）<br>2.ConstraintLayout？（不知道，但知道CoordinatorLayout，然后将这个详细解释了一下）<br>3.知道CoordinatorLayout的子View中behavior是干嘛的吗？（和toolbar交互）<br>4.Rxjava熟悉吗？（不熟悉）<br>5.retrofit注解有哪些？（Get Post Put Delete Streaming）<br>6.Http协议和TCP协议有什么区别（问到这感觉已经凉了，对不起计网老师）<br>7.Http报文的组成（又凉了）<br>8.简历上的BRVAH是什么？BaseRecyclerViewHolderAdapter<br>9.Fragment生命周期？onAttach干嘛的？<br>10.RecyclerView和ListView的区别<br>11.学过什么新技术？AndFix热修复</p>
+<p>知乎注重开发的能力，对底层原理不怎么要求，由于忘了Http挂的理所当然</p>
+<hr>
+<h3 id="滴滴一面（offer、47min）"><a href="#滴滴一面（offer、47min）" class="headerlink" title=" 滴滴一面（offer、47min）"></a><strong> 滴滴一面（offer、47min）</strong></h3><p>0.过度绘制是什么？<br>1.怎么降低view树等级？<br>2.Handler消息机制<br>3.项目<br>4.开始写代码：二分搜索（递归、非递归）、插入排序 （大约 30min）</p>
+<p>一面比较简单，主要是写了一些代码，都忘了</p>
+<h3 id="滴滴二面（41min）"><a href="#滴滴二面（41min）" class="headerlink" title=" 滴滴二面（41min）"></a><strong> 滴滴二面（41min）</strong></h3><p>0.项目介绍，为什么某项目没做完？（没人写后台）<br>1.butterknife原理（不清楚，猜测是反射），对性能有什么影响？<br>2.过度绘制怎么解决？（解决背景，设置activity背景为null）<br>3.view树等级怎么降低？（RelativeLayout代替LinearLayout,，但是RL更消耗CPU）<br>4.为什么RelativeLayout更消耗CPU?(猜测是布局的复杂程度)<br>5.问了一下view、viewgroup的绘制过程<br>6.Service的两种启动方式(start、bind)<br>7.多个Activity启动一个Service会有多少实例？（不清楚，猜测一个，根据同时使用start和bind方法只启动一个猜的）<br>8.service不调用unBind会怎么样？内存泄漏<br>9.滑动冲突处理？给了一个实际例子让我解决<br>10.Volley源码？<br>11.烧一炷A香1个小时，B香半个小时，求烧出45分钟？想了几分钟没想出来，最后面试官问我思路，我说找出15分钟，然后就说这是附加题，他们会考虑我的，以为自己要挂了，说了一句”我真的挺想去的”。</p>
+<p>面试完，试验已经开始1个小时了，走在路上感觉service那边答得稀里糊涂、最后一题也没答好，应该要挂。（其实一面面试官很想让我过去，感觉辜负了他的期望）到教室后给他发”我大概是挂了“，他说没有，已经在准备给你offer了，谢天谢地!二面很注重实际应用，难度较大。</p>
+<hr>
+<h3 id="滴滴三面（0min）"><a href="#滴滴三面（0min）" class="headerlink" title=" 滴滴三面（0min）"></a><strong> 滴滴三面（0min）</strong></h3><p>本来三轮面试，直接跳过了</p>
+<hr>
+<h3 id="后记"><a href="#后记" class="headerlink" title=" 后记 "></a><strong> 后记 </strong></h3><p>面试真的好累，感觉在那边拿到正式录用offer就不找工作了。真的很感谢滴滴的组长给我机会，主要是幸运才能拿到offer。</p>
+<hr>
+<p style="margin-top: 0.4em; text-align: center"><br><b style="font-size: 1.5em;font-weight: 600;">未经授权，禁止转载</b><br> </p>
+
+
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+		<div class="post-tags">
+		  
+			<a href="/tags/笔经-面经/">笔经/面经</a>
+		  
+		</div>
+		
+
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2017/11/17/the-tenth-month-summary-in-2017/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">2017年第十、十一月总结</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    
+    
+      <a class="next" href="/2017/11/17/the-interview-of-xiaomi-by-XieXinBin/">
+        <span class="next-text nav-default">小米面经</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2000 -
+    
+    2018
+    <span class="footer-author"><a href="https://github.com/cumtflyingstudio">flyingstudio</a>.</span>
+    <span class="power-by">
+         博客主题 <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>

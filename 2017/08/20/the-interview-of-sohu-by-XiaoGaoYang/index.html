@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="搜狐面经(前端)"/>
+
+
+
+
+  <meta name="keywords" content="笔经/面经," />
+
+
+
+
+
+  <link rel="alternate" href="/default" title="中国矿业大学学生在线">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1" />
+
+
+
+<link rel="canonical" href="http://cumtonline.github.io/2017/08/20/the-interview-of-sohu-by-XiaoGaoYang/"/>
+
+
+<meta name="description" content="前言 本文是前端组肖高阳的搜狐面经。已offer。   一面 面试官很好，说只是电话初筛，简单的聊了一下，面试过程 14 分钟  简单介绍一下CSS盒模型  IE怪异模式，浏览器的兼容模式（没有文档类型声明时）  margin折叠  BFC  清除浮动的方式    JS闭包  对 this 指向的理解  双向数据绑定如何实现    二面 视频面的，这次是两个面试官一起面，其中有一个是一面的面试官">
+<meta name="keywords" content="笔经&#x2F;面经">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搜狐面经(前端)">
+<meta property="og:url" content="http://cumtonline.github.io/2017/08/20/the-interview-of-sohu-by-XiaoGaoYang/index.html">
+<meta property="og:site_name" content="中国矿业大学学生在线">
+<meta property="og:description" content="前言 本文是前端组肖高阳的搜狐面经。已offer。   一面 面试官很好，说只是电话初筛，简单的聊了一下，面试过程 14 分钟  简单介绍一下CSS盒模型  IE怪异模式，浏览器的兼容模式（没有文档类型声明时）  margin折叠  BFC  清除浮动的方式    JS闭包  对 this 指向的理解  双向数据绑定如何实现    二面 视频面的，这次是两个面试官一起面，其中有一个是一面的面试官">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-12-26T18:43:01.915Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="搜狐面经(前端)">
+<meta name="twitter:description" content="前言 本文是前端组肖高阳的搜狐面经。已offer。   一面 面试官很好，说只是电话初筛，简单的聊了一下，面试过程 14 分钟  简单介绍一下CSS盒模型  IE怪异模式，浏览器的兼容模式（没有文档类型声明时）  margin折叠  BFC  清除浮动的方式    JS闭包  对 this 指向的理解  双向数据绑定如何实现    二面 视频面的，这次是两个面试官一起面，其中有一个是一面的面试官">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1" />
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?60efd223d1a759d774d495ebe182c9ff";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+    <title> 搜狐面经(前端) - 中国矿业大学学生在线 </title>
+  </head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo"><img src="https://s1.ax1x.com/2017/12/29/z06uF.png"></a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                文章
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                关于
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/friends">
+                            
+                            
+                                友链
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/search">
+                            
+                            
+                                站内搜索
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          搜狐面经(前端)
+        
+      </h1>
+
+      <time class="post-time">
+          8月 20 2017
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <h3 id="前言"><a href="#前言" class="headerlink" title=" 前言 "></a><strong> 前言 </strong></h3><p>本文是前端组<a href="https://blog.xgy666.cn/" target="_blank" rel="noopener">肖高阳</a>的搜狐面经。已offer。</p>
+<hr>
+<h3 id="一面"><a href="#一面" class="headerlink" title=" 一面 "></a><strong> 一面 </strong></h3><p>面试官很好，说只是电话初筛，简单的聊了一下，面试过程 14 分钟</p>
+<ol>
+<li><p>简单介绍一下CSS盒模型</p>
+</li>
+<li><p>IE怪异模式，浏览器的兼容模式（没有文档类型声明时）</p>
+</li>
+<li><p>margin折叠</p>
+</li>
+<li><p>BFC</p>
+</li>
+<li><p>清除浮动的方式  </p>
+</li>
+<li><p>JS闭包</p>
+</li>
+<li><p>对 this 指向的理解</p>
+</li>
+<li><p>双向数据绑定如何实现</p>
+</li>
+</ol>
+<h3 id="二面"><a href="#二面" class="headerlink" title=" 二面 "></a><strong> 二面 </strong></h3><p>视频面的，这次是两个面试官一起面，其中有一个是一面的面试官</p>
+<p>一面面试官人很好，有些没说对都会提醒一下，有些内容还会说一下自己的理解</p>
+<ol>
+<li><p>SASS 中的 &amp; 和 extend，mixin</p>
+</li>
+<li><p>jQuery 和 Zepto.js</p>
+</li>
+<li><p>实现一个需求：在网页中插入 1000 个节点（createDocumentFragment 或 innerHTML）</p>
+</li>
+<li><p>JS的数据类型</p>
+</li>
+<li><p>CommonJS、AMD、CMD模块化规范</p>
+</li>
+<li><p>跨域的几种方式，JSONP的缺点，POST怎么跨域，CORS的预检请求</p>
+</li>
+<li><p>缓存的几种方式</p>
+</li>
+<li><p>因为我简历上写了 linux，所以一个面试官问了我一个查看进程的命令（ps命令）</p>
+</li>
+<li><p>说到我的博客，我说是搭在 Coding 上的，然后，问了我 GitHub 和 Coding 的区别</p>
+</li>
+<li><p>你用 Git 是怎样进行多人协作的，冲突解决</p>
+</li>
+</ol>
+<p>（只记得这么多了，其他的可能忘了）</p>
+<p>总体来说，问的还是很基础的，没有深入的问，没有自我介绍，也没有问项目。面试过程 20 分钟。</p>
+<hr>
+<p style="margin-top: 0.4em; text-align: center"><br><b style="font-size: 1.5em;font-weight: 600;">未经授权，禁止转载</b><br> </p>
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+		<div class="post-tags">
+		  
+			<a href="/tags/笔经-面经/">笔经/面经</a>
+		  
+		</div>
+		
+
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2017/08/20/the-interview-of-Ctrip-by-TangJin/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">携程面经(后端)</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    
+    
+      <a class="next" href="/2017/07/31/the-seventh-month-summary-in-2017/">
+        <span class="next-text nav-default">2017年第七月总结</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2000 -
+    
+    2018
+    <span class="footer-author"><a href="https://github.com/cumtflyingstudio">flyingstudio</a>.</span>
+    <span class="power-by">
+         博客主题 <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>

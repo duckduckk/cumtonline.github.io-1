@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="第11-12周总结"/>
+
+
+
+
+  <meta name="keywords" content="Git,Typora," />
+
+
+
+
+
+  <link rel="alternate" href="/default" title="中国矿业大学学生在线">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1" />
+
+
+
+<link rel="canonical" href="http://cumtonline.github.io/2016/12/16/11-12-summary/"/>
+
+
+<meta name="description" content="Git加快git clone速度的方法 一张图展示所有Git命令 Markdown编辑器推荐typora  跨平台 免费 出色的编辑体验  图片插入是大部分Markdown编辑器的问题,某些笔记软件借助自身的存储功能轻松的解决这个问题。但原生的Markdown却是相当麻烦。目前有的解决方案为  使用图床，把图片放到云存储（比如七牛云），生成链接再插入Markdown中，有人也写了相关插件，就连QQ">
+<meta name="keywords" content="Git,Typora">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第11-12周总结">
+<meta property="og:url" content="http://cumtonline.github.io/2016/12/16/11-12-summary/index.html">
+<meta property="og:site_name" content="中国矿业大学学生在线">
+<meta property="og:description" content="Git加快git clone速度的方法 一张图展示所有Git命令 Markdown编辑器推荐typora  跨平台 免费 出色的编辑体验  图片插入是大部分Markdown编辑器的问题,某些笔记软件借助自身的存储功能轻松的解决这个问题。但原生的Markdown却是相当麻烦。目前有的解决方案为  使用图床，把图片放到云存储（比如七牛云），生成链接再插入Markdown中，有人也写了相关插件，就连QQ">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://s1.ax1x.com/2017/12/28/zCmXn.png">
+<meta property="og:image" content="https://s1.ax1x.com/2017/12/28/zCe6s.jpg">
+<meta property="og:image" content="https://s1.ax1x.com/2017/12/28/zCK00.gif">
+<meta property="og:image" content="https://s1.ax1x.com/2017/12/28/zCM7V.gif">
+<meta property="og:image" content="https://s1.ax1x.com/2017/12/28/zCumq.png">
+<meta property="og:updated_time" content="2017-12-29T09:20:40.378Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="第11-12周总结">
+<meta name="twitter:description" content="Git加快git clone速度的方法 一张图展示所有Git命令 Markdown编辑器推荐typora  跨平台 免费 出色的编辑体验  图片插入是大部分Markdown编辑器的问题,某些笔记软件借助自身的存储功能轻松的解决这个问题。但原生的Markdown却是相当麻烦。目前有的解决方案为  使用图床，把图片放到云存储（比如七牛云），生成链接再插入Markdown中，有人也写了相关插件，就连QQ">
+<meta name="twitter:image" content="https://s1.ax1x.com/2017/12/28/zCmXn.png">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1" />
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?60efd223d1a759d774d495ebe182c9ff";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+    <title> 第11-12周总结 - 中国矿业大学学生在线 </title>
+  </head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo"><img src="https://s1.ax1x.com/2017/12/29/z06uF.png"></a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                文章
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                关于
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/friends">
+                            
+                            
+                                友链
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/search">
+                            
+                            
+                                站内搜索
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          第11-12周总结
+        
+      </h1>
+
+      <time class="post-time">
+          12月 16 2016
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><h2 id="加快git-clone速度的方法"><a href="#加快git-clone速度的方法" class="headerlink" title="加快git clone速度的方法"></a>加快git clone速度的方法</h2><p><img src="https://s1.ax1x.com/2017/12/28/zCmXn.png" alt="getImage"></p>
+<h2 id="一张图展示所有Git命令"><a href="#一张图展示所有Git命令" class="headerlink" title="一张图展示所有Git命令"></a>一张图展示所有Git命令</h2><p><img src="https://s1.ax1x.com/2017/12/28/zCe6s.jpg" alt="QQ图片20161216213304"></p>
+<h1 id="Markdown编辑器推荐"><a href="#Markdown编辑器推荐" class="headerlink" title="Markdown编辑器推荐"></a>Markdown编辑器推荐</h1><p><a href="http://www.typora.io/" target="_blank" rel="noopener">typora</a></p>
+<ul>
+<li>跨平台</li>
+<li>免费</li>
+<li>出色的编辑体验</li>
+</ul>
+<p>图片插入是大部分Markdown编辑器的问题,某些笔记软件借助自身的存储功能轻松的解决这个问题。但原生的Markdown却是相当麻烦。目前有的解决方案为</p>
+<ul>
+<li>使用图床，把图片放到云存储（比如七牛云），生成链接再插入Markdown中，有人也写了相关插件，就连QQ截图都能自动保存到云存储中，Ctrl+V就直接是图片链接地址</li>
+<li>把图片转换成base64，虽然可行，做到了图片与文档一体，但是个相当蹩脚的方法，不仅文本变得冗长，有时编辑器若不给力也会卡出翔。</li>
+</ul>
+<p>Typora不提供云存储，但是他尽可能地简化了插入步骤</p>
+<ul>
+<li><p>拖拽式</p>
+<p><img src="https://s1.ax1x.com/2017/12/28/zCK00.gif" alt="drag-img"></p>
+</li>
+<li><p>截图式</p>
+<p><img src="https://s1.ax1x.com/2017/12/28/zCM7V.gif" alt="1"></p>
+</li>
+</ul>
+<p>不管是拖拽式还是截图式生成的路径默认是绝对路径</p>
+<p>如果想用相对路径请在Preference设置<code>Use relative path if possible</code></p>
+<p><img src="https://s1.ax1x.com/2017/12/28/zCumq.png" alt="1482037425302"></p>
+<p>如果想用截图式,<strong>必须</strong>勾选上图的第二项,<strong>并且</strong>在每次编辑时设置一个文件路径,这个文件路径告诉Typora要把剪贴板中的图片保存到哪里,Windows版的设置选项在Edit-&gt;Image Tool-&gt;When insert local image-&gt;Copy Image File to Folder-&gt;选择文件夹</p>
+<h1 id="Typora与Hexo"><a href="#Typora与Hexo" class="headerlink" title="Typora与Hexo"></a>Typora与Hexo</h1><p>Hexo3提供<code></code> 模板语法用于生成图片,但这显然不是我们想要的,我们想”所见即所得”,如何在使用普通的Markdown模式下同时能保证博客的正确生成?</p>
+<p>药方在这</p>
+<ul>
+<li><a href="https://github.com/CodeFalling/hexo-asset-image" target="_blank" rel="noopener">https://github.com/CodeFalling/hexo-asset-image</a></li>
+</ul>
+<p>很简单的插件,代码不足50行。</p>
+<p>根据README安装插件，并配置<code>post_asset_folder</code> 。</p>
+<p>他会如他所描述的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">MacGesture2-Publish</span><br><span class="line">├── apppicker.jpg</span><br><span class="line">├── logo.jpg</span><br><span class="line">└── rules.jpg</span><br><span class="line">MacGesture2-Publish.md</span><br></pre></td></tr></table></figure>
+<p>把<code>![logo](logo.jpg)</code> 渲染成 正确的路径</p>
+<p>但这与Typora的风格不一致。</p>
+<p>Typora使用传统的Markdown，对于资源文件夹下的图片要求以这种形式<code>![图片标题](以文章名命名的资源文件夹\图片.jpg)</code>才能正常在Typora中预览。</p>
+<p>所以下面就简单的改写这份插件</p>
+<p>打开<code>你的博客站点文件夹\node_modules\hexo-asset-image\index.js</code></p>
+<p>从第25行开始修改成这样(其实就把下面的第10行注释掉,改成5~9)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'img'</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> src = $(<span class="keyword">this</span>).attr(<span class="string">'src'</span>);</span><br><span class="line">  <span class="keyword">if</span>(!<span class="regexp">/http[s]*.*|\/\/.*/</span>.test(src))&#123;</span><br><span class="line">    <span class="comment">// is a local file in post_asset_folder</span></span><br><span class="line">    <span class="keyword">if</span> (src.indexOf(<span class="string">'\\'</span>)!=<span class="number">-1</span>)&#123;<span class="comment">//用于windows</span></span><br><span class="line">      src = src.split(<span class="string">"\\"</span>).pop();  </span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">      src = src.split(<span class="string">"/"</span>).pop();	</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//src = src.split("/").pop();</span></span><br><span class="line">    $(<span class="keyword">this</span>).attr(<span class="string">'src'</span>, <span class="string">'/'</span> + link + src);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line">data[key] = $.html();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>重新生成博客,并预览</p>
+<h1 id="分享"><a href="#分享" class="headerlink" title="分享"></a>分享</h1><ul>
+<li><a href="https://testerhome.com/topics/6555" target="_blank" rel="noopener">PostMan自动化测试</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/24083839" target="_blank" rel="noopener">网页设计巅峰之作</a></li>
+<li><a href="https://sm.ms" target="_blank" rel="noopener">图床,时效性未知,安全性未知</a></li>
+<li><a href="https://unicode-table.com/en/#control-character" target="_blank" rel="noopener">Unicode字符</a></li>
+<li><a href="https://gold.xitu.io/entry/584779bc128fe1006c5dcc1a" target="_blank" rel="noopener">一天精通Chrome调试</a></li>
+<li><a href="https://gold.xitu.io/entry/58469472ac502e006b098cc9" target="_blank" rel="noopener">Python爬虫实战项目</a></li>
+<li><a href="https://gold.xitu.io/entry/58493e8b0ce463005c47743f" target="_blank" rel="noopener">设计师与程序猿的10个站点收集</a></li>
+<li><a href="https://blog.souche.com/zhong-xue-sheng-jiao-ni-ru-he-xie-hao-yi-pian-ji-zhu-bo-ke/" target="_blank" rel="noopener">如何写好一篇技术博客</a>    </li>
+<li><a href="https://buluo.qq.com/p/detail.html?bid=314687&amp;pid=3951568-1481348739&amp;from=grp_sub_obj" target="_blank" rel="noopener">一个程序员的顿悟：理想的程序员只比你多了6个一点点</a></li>
+<li><a href="https://wanqu.co/b/7/2015-05-24-behind-the-scenes.html?s=about&amp;redirect=1" target="_blank" rel="noopener">湾区日报是如何运作的</a></li>
+<li><a href="http://www.jianshu.com/p/81520ae118ad" target="_blank" rel="noopener">分享一些自我提升的秘笈网站 by 逻辑炸了</a></li>
+<li><a href="http://mp.weixin.qq.com/s?__biz=MjM5MTA1MjAxMQ==&amp;mid=2651224563&amp;idx=1&amp;sn=034a7d7b55055cfd754488e280977afc&amp;chksm=bd49a0778a3e2961806e51d21a5e5d746f03f64ce760e8e6514bb277fa015b296602c9ff59e0&amp;mpshare=1&amp;scene=23&amp;srcid=1214pg6ybR3Acza3XKGQKaZn#rd" target="_blank" rel="noopener">Service Worker, 你到底是个什么东西</a></li>
+<li><a href="https://www.zhihu.com/question/23238816/answer/135234635?group_id=791055958888583168" target="_blank" rel="noopener">正确的坐姿</a></li>
+<li><a href="http://www.zhihu.com/question/20914951/answer/16595774" target="_blank" rel="noopener">前端程序猿需不需要学Linux</a></li>
+<li><a href="http://hostinger.com.hk" target="_blank" rel="noopener">免费PHP空间</a></li>
+</ul>
+
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+		<div class="post-tags">
+		  
+			<a href="/tags/Git/">Git</a>
+		  
+			<a href="/tags/Typora/">Typora</a>
+		  
+		</div>
+		
+
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2016/12/28/former-libary/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">内部图书馆</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    
+    
+      <a class="next" href="/2016/12/16/8-9-10-summary/">
+        <span class="next-text nav-default">第8-9-10周总结</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2000 -
+    
+    2018
+    <span class="footer-author"><a href="https://github.com/cumtflyingstudio">flyingstudio</a>.</span>
+    <span class="power-by">
+         博客主题 <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>
