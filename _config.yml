@@ -3,14 +3,14 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 翔工作室
+title: 中国矿业大学翔工作室
 author: flyingstudio
 language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://jjnoob.github.io
+url: http://cumtonline.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -73,5 +73,5 @@ theme: polarbear
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: ssh://git@cumtonline/cumtonline/cumtonline.github.io
+  repo: ssh://git@online/cumtonline/cumtonline.github.io
   branch: master
